@@ -14,14 +14,10 @@ button {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin: 0;
 }
-ul,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -463,4 +459,246 @@ img {
 }
 .svg-footer {
   fill: #f4f4fd;
+}
+.footer-field {
+}
+
+.footer-input {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  background-color: transparent;
+  width: 313px;
+  height: 52px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+.footer-btn {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.21;
+  color: #ffffff;
+  border-radius: 100px;
+  background: rgb(253, 146, 34);
+  border: none;
+  padding: 17px 32px;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 72px 24px 24px 24px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.close-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(231, 233, 252);
+  width: 8px;
+  height: 8px;
+  padding: 8px;
+}
+.modal-close:hover,
+.modal-close:focus {
+  background-color: rgb(64, 75, 191);
+  border: none;
+  fill: rgb(255, 255, 255);
+}
+.modal-title {
+  font-style: inherit;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgb(46, 47, 66);
+}
+.modal-form {
+  text-align: center;
+}
+.input-wrapper {
+  position: relative;
+}
+
+.form-field {
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 38px;
+  padding-right: 4px;
+  font-size: 16px;
+  color: rgb(46, 47, 66);
+  outline: transparent;
+}
+.form-icon {
+  fill: rgb(46, 47, 66);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: rgba(64, 64, 64, 0.3);
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(17, 17, 17, 0.25);
+  background-color: transparent;
+  color: rgba(46, 47, 66);
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 4px;
+  outline: transparent;
+  resize: none;
+}
+.form-field:focus-within .form-textarea {
+  stroke: rgb(77, 90, 229);
+}
+.form-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgb(77, 90, 229);
+}
+.form-input:focus + .form-icon {
+  stroke: rgb(77, 90, 229);
+  fill: rgb(77, 90, 229);
+}
+
+/* Скрываем стандартный чекбокс */
+.form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Контейнер чекбокса */
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Стилизация label */
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Обычный чекбокс (пустая рамка) */
+.form-icon-uncheck,
+.form-icon-check {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* Фикс, чтобы чекбокс не сжимался */
+  stroke: rgba(46, 47, 66, 0.4); /* Цвет границы */
+  fill: transparent; /* По умолчанию без заливки */
+  background-color: transparent; /* Без фона */
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+/* По умолчанию показываем пустой чекбокс */
+.form-icon-check {
+  display: none;
+}
+
+/* Если чекбокс отмечен, показываем залитый фон и белую иконку */
+.form-checkbox:checked + .form-label .form-icon-uncheck {
+  display: none;
+}
+
+.form-checkbox:checked + .form-label .form-icon-check {
+  display: block;
+  stroke: white; /* Иконка остается белой */
+  fill: white; /* Белая галочка */
+  background-color: rgb(77, 90, 229); /* Синий фон */
+  border: 1px solid rgb(77, 90, 229); /* Синяя рамка */
+}
+
+/* Фокус (outline) только вокруг иконки */
+.form-checkbox:focus + .form-label .form-icon-uncheck,
+.form-checkbox:focus + .form-label .form-icon-check {
+  outline: 2px solid rgb(77, 90, 229);
+  border-radius: 2px;
+}
+
+/* Текст чекбокса */
+.check-text {
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+/* Ссылка */
+.check-link {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
