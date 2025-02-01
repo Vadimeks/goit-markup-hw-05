@@ -659,13 +659,6 @@ img {
   border: 0;
 }
 
-/* Контейнер чекбокса */
-.checkbox-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
 .custom-icon {
   width: 16px;
   height: 16px;
@@ -680,35 +673,10 @@ img {
   fill: transparent;
 }
 
-.form-checkbox:checked + .custom-icon {
+.form-checkbox:checked + .form-label .custom-icon {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
-}
-/* Если чекбокс отмечен, показываем залитый фон и белую иконку */
-.form-checkbox:checked + .form-label .form-icon-uncheck {
-  display: none;
-}
-
-.form-checkbox:checked + .form-label .form-icon-check {
-  display: block;
-  stroke: white; /* Иконка остается белой */
-  fill: white; /* Белая галочка */
-  background-color: rgb(77, 90, 229); /* Синий фон */
-  border: 1px solid rgb(77, 90, 229); /* Синяя рамка */
-}
-
-/* Фокус (outline) только вокруг иконки */
-.form-checkbox:focus + .form-label .form-icon-check {
-  outline: rgb(77, 90, 229);
-}
-
-/* Текст чекбокса */
-.check-text {
-  font-size: 14px;
-  line-height: 1.21;
-  letter-spacing: -0.02em;
-  color: rgba(64, 64, 64, 0.6);
 }
 
 /* Ссылка */
