@@ -543,8 +543,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 24px;
-  right: 0px;
-  transform: translateY(0, 50%);
+  right: 24px;
+  transform: translateY(0);
 }
 .close-btn {
   width: 8px;
@@ -624,6 +624,9 @@ img {
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field.textarea-div {
+  margin-bottom: 16px;
 }
 .form-field:focus-within .form-textarea {
   stroke: rgb(77, 90, 229);
