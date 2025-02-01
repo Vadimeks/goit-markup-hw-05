@@ -448,7 +448,10 @@ img {
   letter-spacing: 0.04em;
   font-weight: 500;
 }
-
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #404bbf;
+}
 .footer-input {
   border: 1px solid #ffffff;
   border-radius: 4px;
