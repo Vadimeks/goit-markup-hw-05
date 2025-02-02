@@ -419,7 +419,7 @@ img {
   align-items: flex-start;
   justify-content: left;
 }
-.footer-subscribe .text {
+.text.subscribe-text {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -444,7 +444,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+
   line-height: 1.5;
   letter-spacing: 0.04em;
   font-weight: 500;
