@@ -413,13 +413,13 @@ img {
   justify-content: left;
   margin-right: 80px;
 }
-.footer-sudscribe {
+.footer-subscribe {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
 }
-.footer-sudscribe .text {
+.footer-subscribe .text {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -431,7 +431,8 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start; /* Выраўноўванне па левым краі */
+  justify-content: flex-start;
+  gap: 24px;
 }
 .footer-btn {
   height: 40px;
