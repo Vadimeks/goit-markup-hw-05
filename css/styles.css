@@ -470,10 +470,13 @@ img {
 }
 
 .footer-input::placeholder {
-  color: #ffffff; /* Была памылка: пропуск двукроп'я */
+  color: #ffffff;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+}
+.footer-input:focus::placeholder {
+  color: transparent;
 }
 .subscribe-icon {
   margin-left: 16px;
